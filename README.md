@@ -1,59 +1,92 @@
-# OutfitCheck
+# 👗 Outfit Check — Wardrobe Organizer App  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+A modern and stylish wardrobe organizer built with **Angular**.  
+Users can upload outfit photos, filter them by multiple categories, and view everything in a clean, attractive gallery.  
+All data is stored locally using **IndexedDB (Dexie.js)** — no backend required.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+### ✨ Core Features  
+- Upload outfits with:
+  - Image preview  
+  - Type (Shirt, Pant, Other)  
+  - Color  
+  - Occasion  
+- Stylish, attractive upload form  
+- Gallery with modern card-based UI  
+- Powerful filtering system:
+  - By type  
+  - By color  
+  - By occasion  
+- Dashboard with counts:
+  - Total outfits  
+  - Shirts  
+  - Pants  
 
-```bash
-ng serve
-```
+### 🎨 UI / UX Features  
+- Beautiful homepage with latest uploads  
+- Smooth hover animations  
+- Clean modern gradients  
+- Fully responsive layout  
+- Navigation bar with routing  
+- All pages follow a consistent stylish theme  
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 🗄 Storage  
+- Saves all outfit data in **IndexedDB**  
+- Works offline  
+- Fast, secure local storage  
+- No server needed  
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🏗 Tech Stack
 
-```bash
-ng generate component component-name
-```
+| Area | Technology |
+|------|------------|
+| Frontend | Angular 17 (Standalone Components) |
+| Programming Language | TypeScript |
+| Styling | Custom CSS |
+| Local Database | IndexedDB via Dexie.js |
+| Build Tool | Angular CLI |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📂 Project Structure
 
-## Building
+src/app/
+│
+├── components/
+│ ├── home/
+│ ├── upload/
+│ ├── gallery/
+│ ├── dashboard/
+│ ├── filters/
+│
+├── services/
+│ ├── image-db.service.ts
+│ ├── storage.service.ts
+│
+├── models/
+│ ├── clothing-item.ts
+│
+├── app.routes.ts
+└── app.ts
 
-To build the project run:
+## 🛠 Installation & Running the App
 
-```bash
-ng build
-```
+### 1️⃣ Clone the repository  
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+git clone https://github.com/AllenJosh2304/outfit-check-Angular.git
+2️⃣ Install dependencies
+npm install
+3️⃣ Run the app
 
-## Running unit tests
+ng serve --open
+The app will open automatically at:
+👉 http://localhost:4200
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+👨‍💻 Developer
+Allen Joshua
+GitHub: https://github.com/AllenJosh2304
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🎉 Thank you for checking out Outfit Check!
