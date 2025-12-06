@@ -1,0 +1,59 @@
+/* Main gallery grid */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Each card */
+.gallery-card {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Hover effect */
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+}
+
+/* Image styling */
+.gallery-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+/* Details text */
+.info {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button */
+button {
+  background: #ff5252;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s ease;
+}
+
+/* Button hover */
+button:hover {
+  background: #e63939;
+}

@@ -1,0 +1,21 @@
+<h2>Gallery</h2>
+
+<!-- Filtering UI -->
+<app-filters (filtersChanged)="applyFilters($event)"></app-filters>
+
+<!-- Display items -->
+<div class="gallery-container">
+
+  <div class="gallery-card" *ngFor="let item of filteredItems">
+    <img [src]="item.imageDataUrl" class="gallery-image" />
+
+    <div class="info">
+      <p><strong>Type:</strong> {{ item.type }}</p>
+      <p><strong>Color:</strong> {{ item.color }}</p>
+      <p><strong>Occasion:</strong> {{ item.occasion }}</p>
+    </div>
+
+    <button (click)="delete(item.id)">Delete</button>
+  </div>
+
+</div>

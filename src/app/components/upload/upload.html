@@ -1,0 +1,50 @@
+<div class="upload-wrapper">
+
+  <h2 class="upload-title">Add New Outfit</h2>
+
+  <!-- Upload Card -->
+  <div class="upload-card">
+
+    <!-- Image Picker -->
+    <label class="file-picker">
+      <span>Select Image</span>
+      <input type="file" accept="image/*" (change)="onFileSelected($event)" />
+    </label>
+
+    <!-- Preview -->
+    <div *ngIf="preview" class="preview-box">
+      <img [src]="preview" class="preview-image" />
+    </div>
+
+    <!-- Form Fields -->
+    <div class="form-group">
+      <label>Type:</label>
+      <select [(ngModel)]="type">
+        <option value="shirt">Shirt</option>
+        <option value="pant">Pant</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Color:</label>
+      <input type="text" [(ngModel)]="color" placeholder="e.g. Blue" />
+    </div>
+
+    <div class="form-group">
+      <label>Occasion:</label>
+      <select [(ngModel)]="occasion">
+        <option value="casual">Casual</option>
+        <option value="formal">Formal</option>
+        <option value="party">Party</option>
+        <option value="sports">Sports</option>
+      </select>
+    </div>
+
+    <button class="save-button" (click)="save()" [disabled]="!preview">
+      Save Outfit
+    </button>
+
+  </div>
+
+</div>

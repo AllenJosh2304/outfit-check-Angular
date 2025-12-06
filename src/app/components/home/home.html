@@ -1,0 +1,32 @@
+<div class="home-container">
+
+  <!-- Header -->
+  <h1 class="title">Outfit Check</h1>
+  <p class="subtitle">Your personal wardrobe organizer</p>
+
+  <!-- Big Add Outfit Button -->
+  <div class="add-button-container">
+    <a routerLink="/upload" class="add-button">+ Add New Outfit</a>
+  </div>
+
+  <!-- Latest Outfits Section -->
+  <h2 class="section-title">Latest Uploads</h2>
+
+  <div class="latest-grid">
+    <div class="latest-card" *ngFor="let item of latestItems">
+      <img [src]="item.imageDataUrl" class="latest-image" />
+
+      <div class="text">
+        <p><strong>{{ item.type | titlecase }}</strong></p>
+        <p>{{ item.color | titlecase }}</p>
+        <p>{{ item.occasion | titlecase }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Full Gallery Button -->
+  <div class="view-all-container">
+    <a routerLink="/gallery" class="view-all-button">View Full Wardrobe →</a>
+  </div>
+
+</div>

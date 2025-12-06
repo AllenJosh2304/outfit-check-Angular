@@ -1,0 +1,20 @@
+<div class="filters-container">
+  <label>Type:</label>
+  <select [(ngModel)]="type" (change)="emitFilters()">
+    <option value="">All</option>
+    <option value="shirt">Shirt</option>
+    <option value="pant">Pant</option>
+  </select>
+
+  <label>Color:</label>
+  <input type="text" [(ngModel)]="color" (input)="emitFilters()" placeholder="e.g. blue">
+
+  <label>Occasion:</label>
+  <select [(ngModel)]="occasion" (change)="emitFilters()">
+    <option value="">All</option>
+    <option value="casual">Casual</option>
+    <option value="formal">Formal</option>
+    <option value="party">Party</option>
+    <option value="sports">Sports</option>
+  </select>
+</div>
